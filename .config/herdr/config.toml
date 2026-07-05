@@ -1,0 +1,19 @@
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
+prompt_new_tab_name = false
+redraw_on_focus_gained = false
+[theme]
+name = "tokyo-night"
+auto_switch = false
+[keys]
+prefix = "ctrl+space"
+goto = "prefix+g"
+new_tab = "prefix+c"
+next_tab = "prefix+n"
+previous_tab = "prefix+p"
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+split_horizontal = "prefix+minus"

@@ -57,9 +57,9 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 # dotfiles config --local core.excludesFile "$HOME/.config/dotfiles-ignore"
 
 # Tmux on startup
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach -t default || tmux new -s default -c /some/path
-fi
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#   tmux attach -t default || tmux new -s default -c /some/path
+# fi
 
 grep_failed() {
   databricks jobs get-run-output "$1" | jq -r '.logs' | rg -m 1 -A 5 FAILED
