@@ -1,6 +1,6 @@
 [ui]
 agent_panel_sort = "spaces"
-show_agent_labels_on_pane_borders = true
+show_agent_labels_on_pane_borders = false
 prompt_new_tab_name = false
 redraw_on_focus_gained = false
 [theme]
@@ -8,12 +8,33 @@ name = "tokyo-night"
 auto_switch = false
 [keys]
 prefix = "ctrl+space"
-goto = "prefix+g"
+goto = "prefix+s"
+toggle_sidebar = "prefix+e"
 new_tab = "prefix+c"
 next_tab = "prefix+n"
 previous_tab = "prefix+p"
-focus_pane_left = "ctrl+h"
-focus_pane_down = "ctrl+j"
-focus_pane_up = "ctrl+k"
-focus_pane_right = "ctrl+l"
 split_horizontal = "prefix+minus"
+
+[[keys.command]]
+key = "ctrl+h"
+type = "plugin_action"
+command = "vim-herdr-navigation.left"
+description = "navigate left (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "plugin_action"
+command = "vim-herdr-navigation.down"
+description = "navigate down (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "plugin_action"
+command = "vim-herdr-navigation.up"
+description = "navigate up (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "plugin_action"
+command = "vim-herdr-navigation.right"
+description = "navigate right (vim/herdr)"
