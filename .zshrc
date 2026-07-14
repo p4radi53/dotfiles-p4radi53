@@ -12,6 +12,13 @@ else
   compinit -C
 fi
 
+# Completion styling (previously provided by oh-my-zsh)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$HOME/.zcompcache"
+
 # Enable starship
 eval "$(starship init zsh)"
 
